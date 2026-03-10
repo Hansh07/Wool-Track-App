@@ -6,9 +6,14 @@ const axiosClient = axios.create({
     headers: { 'Content-Type': 'application/json' },
 });
 
-// Request interceptor - attach access token
+// Request interceptor - attach access token & fix path duplication
 axiosClient.interceptors.request.use(
     (config) => {
+        // Fix potential double /api prefix (e.g. baseURL=/api + url=/api/auth)
+        if (config.baseURL?.endsWith('/api') && config.url?.startsWith('/api')) {
+            config.url = config.url.replace('/api', '');
+        }
+
         const token = localStorage.getItem('accessToken');
         if (token) config.headers.Authorization = 'Bearer ' + token;
         return config;

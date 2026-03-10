@@ -1,0 +1,90 @@
+{
+    "nav": {
+        "dashboard": "ਡੈਸ਼ਬੋਰਡ",
+        "batches": "ਬੈਚ",
+        "marketplace": "ਬਾਜ਼ਾਰ",
+        "monitoring": "ਨਿਗਰਾਨੀ",
+        "auction": "ਨਿਲਾਮੀ",
+        "logistics": "ਲੌਜਿਸਟਿਕਸ",
+        "certificates": "ਸਰਟੀਫਿਕੇਟ",
+        "inventory": "ਇਨਵੈਂਟਰੀ",
+        "esg": "ਈਐਸਜੀ",
+        "profile": "ਪ੍ਰੋਫ਼ਾਈਲ",
+        "admin": "ਐਡਮਿਨ",
+        "logout": "ਲੌਗਆਉਟ",
+        "login": "ਸਾਈਨ ਇਨ",
+        "register": "ਸ਼ੁਰੂ ਕਰੋ"
+    },
+    "auth": {
+        "email": "ਈਮੇਲ ਪਤਾ",
+        "password": "ਪਾਸਵਰਡ",
+        "name": "ਪੂਰਾ ਨਾਮ",
+        "role": "ਭੂਮਿਕਾ",
+        "login": "ਸਾਈਨ ਇਨ",
+        "register": "ਖਾਤਾ ਬਣਾਓ",
+        "twoFactor": "2FA ਕੋਡ",
+        "twoFactorPlaceholder": "6-ਅੰਕੀ ਕੋਡ ਦਾਖਲ ਕਰੋ",
+        "forgotPassword": "ਪਾਸਵਰਡ ਭੁੱਲ ਗਏ?",
+        "noAccount": "ਖਾਤਾ ਨਹੀਂ ਹੈ?",
+        "hasAccount": "ਪਹਿਲਾਂ ਤੋਂ ਖਾਤਾ ਹੈ?"
+    },
+    "batch": {
+        "create": "ਬੈਚ ਬਣਾਓ",
+        "woolType": "ਉੱਨ ਦੀ ਕਿਸਮ",
+        "weight": "ਭਾਰ (ਕਿਲੋਗ੍ਰਾਮ)",
+        "moisture": "ਨਮੀ %",
+        "source": "ਖੇਤ ਸਰੋਤ",
+        "status": "ਸਥਿਤੀ",
+        "stage": "ਪ੍ਰੋਸੈਸਿੰਗ ਪੜਾਅ",
+        "quality": "ਗੁਣਵੱਤਾ ਸਥਿਤੀ"
+    },
+    "quality": {
+        "inspect": "ਨਿਰੀਖਣ",
+        "approve": "ਮਨਜ਼ੂਰ",
+        "reject": "ਰੱਦ",
+        "grade": "ਗੁਣਵੱਤਾ ਗ੍ਰੇਡ",
+        "fiberDiameter": "ਫਾਈਬਰ ਵਿਆਸ (ਮਾਈਕ੍ਰੋਨ)",
+        "tensileStrength": "ਖਿੱਚ ਤਾਕਤ",
+        "cleanWoolYield": "ਸਾਫ਼ ਉੱਨ ਉਪਜ %"
+    },
+    "payment": {
+        "pay": "ਹੁਣੇ ਭੁਗਤਾਨ ਕਰੋ",
+        "amount": "ਰਕਮ",
+        "method": "ਭੁਗਤਾਨ ਵਿਧੀ",
+        "razorpay": "Razorpay ਨਾਲ ਭੁਗਤਾਨ ਕਰੋ",
+        "success": "ਭੁਗਤਾਨ ਸਫਲ",
+        "failed": "ਭੁਗਤਾਨ ਅਸਫਲ"
+    },
+    "auction": {
+        "live": "ਲਾਈਵ ਨਿਲਾਮੀ",
+        "upcoming": "ਆਉਣ ਵਾਲੀ",
+        "placeBid": "ਬੋਲੀ ਲਗਾਓ",
+        "currentBid": "ਮੌਜੂਦਾ ਬੋਲੀ",
+        "startPrice": "ਸ਼ੁਰੂਆਤੀ ਕੀਮਤ",
+        "endTime": "ਸਮਾਪਤੀ ਸਮਾਂ",
+        "winner": "ਜੇਤੂ"
+    },
+    "esg": {
+        "title": "ਈਐਸਜੀ ਸਥਿਰਤਾ",
+        "score": "ਈਐਸਜੀ ਸਕੋਰ",
+        "environmental": "ਵਾਤਾਵਰਣ",
+        "social": "ਸਮਾਜਿਕ",
+        "governance": "ਪ੍ਰਸ਼ਾਸਨ",
+        "submit": "ਰਿਪੋਰਟ ਜਮ੍ਹਾਂ ਕਰੋ",
+        "verified": "ਤਸਦੀਕਸ਼ੁਦਾ"
+    },
+    "common": {
+        "save": "ਸੁਰੱਖਿਅਤ ਕਰੋ",
+        "cancel": "ਰੱਦ ਕਰੋ",
+        "delete": "ਮਿਟਾਓ",
+        "edit": "ਸੋਧੋ",
+        "view": "ਦੇਖੋ",
+        "loading": "ਲੋਡ ਹੋ ਰਿਹਾ ਹੈ...",
+        "error": "ਗਲਤੀ",
+        "success": "ਸਫਲਤਾ",
+        "search": "ਖੋਜੋ",
+        "filter": "ਫਿਲਟਰ",
+        "export": "ਨਿਰਯਾਤ",
+        "noData": "ਕੋਈ ਡੇਟਾ ਉਪਲਬਧ ਨਹੀਂ"
+    }
+}

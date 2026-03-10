@@ -1,0 +1,90 @@
+{
+    "nav": {
+        "dashboard": "Dashboard",
+        "batches": "Batches",
+        "marketplace": "Marketplace",
+        "monitoring": "Monitoring",
+        "auction": "Auction",
+        "logistics": "Logistics",
+        "certificates": "Certificates",
+        "inventory": "Inventory",
+        "esg": "ESG",
+        "profile": "Profile",
+        "admin": "Admin",
+        "logout": "Logout",
+        "login": "Sign In",
+        "register": "Get Started"
+    },
+    "auth": {
+        "email": "Email Address",
+        "password": "Password",
+        "name": "Full Name",
+        "role": "Role",
+        "login": "Sign In",
+        "register": "Create Account",
+        "twoFactor": "2FA Code",
+        "twoFactorPlaceholder": "Enter 6-digit code",
+        "forgotPassword": "Forgot Password?",
+        "noAccount": "Don't have an account?",
+        "hasAccount": "Already have an account?"
+    },
+    "batch": {
+        "create": "Create Batch",
+        "woolType": "Wool Type",
+        "weight": "Weight (kg)",
+        "moisture": "Moisture %",
+        "source": "Farm Source",
+        "status": "Status",
+        "stage": "Processing Stage",
+        "quality": "Quality Status"
+    },
+    "quality": {
+        "inspect": "Inspect",
+        "approve": "Approve",
+        "reject": "Reject",
+        "grade": "Quality Grade",
+        "fiberDiameter": "Fiber Diameter (microns)",
+        "tensileStrength": "Tensile Strength",
+        "cleanWoolYield": "Clean Wool Yield %"
+    },
+    "payment": {
+        "pay": "Pay Now",
+        "amount": "Amount",
+        "method": "Payment Method",
+        "razorpay": "Pay with Razorpay",
+        "success": "Payment Successful",
+        "failed": "Payment Failed"
+    },
+    "auction": {
+        "live": "Live Auctions",
+        "upcoming": "Upcoming",
+        "placeBid": "Place Bid",
+        "currentBid": "Current Bid",
+        "startPrice": "Starting Price",
+        "endTime": "Ends At",
+        "winner": "Winner"
+    },
+    "esg": {
+        "title": "ESG Sustainability",
+        "score": "ESG Score",
+        "environmental": "Environmental",
+        "social": "Social",
+        "governance": "Governance",
+        "submit": "Submit Report",
+        "verified": "Verified"
+    },
+    "common": {
+        "save": "Save",
+        "cancel": "Cancel",
+        "delete": "Delete",
+        "edit": "Edit",
+        "view": "View",
+        "loading": "Loading...",
+        "error": "Error",
+        "success": "Success",
+        "search": "Search",
+        "filter": "Filter",
+        "export": "Export",
+        "noData": "No data available"
+    }
+}

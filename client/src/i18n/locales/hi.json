@@ -1,0 +1,90 @@
+{
+    "nav": {
+        "dashboard": "डैशबोर्ड",
+        "batches": "बैच",
+        "marketplace": "बाज़ार",
+        "monitoring": "निगरानी",
+        "auction": "नीलामी",
+        "logistics": "लॉजिस्टिक्स",
+        "certificates": "प्रमाणपत्र",
+        "inventory": "इन्वेंटरी",
+        "esg": "ईएसजी",
+        "profile": "प्रोफ़ाइल",
+        "admin": "व्यवस्थापक",
+        "logout": "लॉगआउट",
+        "login": "साइन इन",
+        "register": "शुरू करें"
+    },
+    "auth": {
+        "email": "ईमेल पता",
+        "password": "पासवर्ड",
+        "name": "पूरा नाम",
+        "role": "भूमिका",
+        "login": "साइन इन",
+        "register": "खाता बनाएं",
+        "twoFactor": "2FA कोड",
+        "twoFactorPlaceholder": "6 अंकों का कोड दर्ज करें",
+        "forgotPassword": "पासवर्ड भूल गए?",
+        "noAccount": "खाता नहीं है?",
+        "hasAccount": "पहले से खाता है?"
+    },
+    "batch": {
+        "create": "बैच बनाएं",
+        "woolType": "ऊन प्रकार",
+        "weight": "वजन (किग्रा)",
+        "moisture": "नमी %",
+        "source": "खेत स्रोत",
+        "status": "स्थिति",
+        "stage": "प्रसंस्करण चरण",
+        "quality": "गुणवत्ता स्थिति"
+    },
+    "quality": {
+        "inspect": "निरीक्षण",
+        "approve": "अनुमोदित",
+        "reject": "अस्वीकार",
+        "grade": "गुणवत्ता ग्रेड",
+        "fiberDiameter": "फाइबर व्यास (माइक्रोन)",
+        "tensileStrength": "तन्य शक्ति",
+        "cleanWoolYield": "स्वच्छ ऊन उपज %"
+    },
+    "payment": {
+        "pay": "अभी भुगतान करें",
+        "amount": "राशि",
+        "method": "भुगतान विधि",
+        "razorpay": "Razorpay से भुगतान करें",
+        "success": "भुगतान सफल",
+        "failed": "भुगतान विफल"
+    },
+    "auction": {
+        "live": "लाइव नीलामी",
+        "upcoming": "आगामी",
+        "placeBid": "बोली लगाएं",
+        "currentBid": "वर्तमान बोली",
+        "startPrice": "शुरुआती कीमत",
+        "endTime": "समाप्ति समय",
+        "winner": "विजेता"
+    },
+    "esg": {
+        "title": "ईएसजी स्थिरता",
+        "score": "ईएसजी स्कोर",
+        "environmental": "पर्यावरणीय",
+        "social": "सामाजिक",
+        "governance": "शासन",
+        "submit": "रिपोर्ट जमा करें",
+        "verified": "सत्यापित"
+    },
+    "common": {
+        "save": "सहेजें",
+        "cancel": "रद्द करें",
+        "delete": "हटाएं",
+        "edit": "संपादित करें",
+        "view": "देखें",
+        "loading": "लोड हो रहा है...",
+        "error": "त्रुटि",
+        "success": "सफलता",
+        "search": "खोजें",
+        "filter": "फ़िल्टर",
+        "export": "निर्यात",
+        "noData": "कोई डेटा उपलब्ध नहीं"
+    }
+}

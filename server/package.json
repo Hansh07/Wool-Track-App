@@ -1,0 +1,45 @@
+{
+    "name": "wool-monitoring-server",
+    "version": "2.0.0",
+    "description": "Enterprise SaaS Backend for Wool Monitoring Platform",
+    "main": "src/server.js",
+    "scripts": {
+        "start": "node src/server.js",
+        "dev": "nodemon src/server.js",
+        "seed": "node src/seed/seedUsers.js",
+        "pm2:start": "pm2 start ecosystem.config.js",
+        "pm2:stop": "pm2 stop wool-server",
+        "pm2:logs": "pm2 logs wool-server"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "@google/generative-ai": "^0.24.1",
+        "axios": "^1.13.2",
+        "bcryptjs": "^2.4.3",
+        "cookie-parser": "^1.4.6",
+        "compression": "^1.7.4",
+        "cors": "^2.8.5",
+        "dotenv": "^16.4.7",
+        "express": "^4.21.2",
+        "express-rate-limit": "^7.4.1",
+        "express-validator": "^7.2.0",
+        "helmet": "^8.0.0",
+        "ioredis": "^5.4.1",
+        "jsonwebtoken": "^9.0.2",
+        "mongoose": "^8.9.3",
+        "morgan": "^1.10.0",
+        "multer": "^2.0.2",
+        "nodemailer": "^6.9.16",
+        "qrcode": "^1.5.4",
+        "razorpay": "^2.9.6",
+        "socket.io": "^4.8.1",
+        "speakeasy": "^2.0.0",
+        "winston": "^3.17.0",
+        "winston-daily-rotate-file": "^5.0.0"
+    },
+    "devDependencies": {
+        "nodemon": "^3.1.9"
+    }
+}

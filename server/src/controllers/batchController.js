@@ -62,8 +62,12 @@ const getBatches = async (req, res) => {
                 break;
 
             case 'QUALITY_INSPECTOR':
-                // Inspectors only see batches that have completed mill processing
-                query = { currentStage: 'Finished' };
+                // Default to Finished if no stage specified, but allow all if permission exists
+                if (req.user.permissions?.includes('view_all_batches')) {
+                    query = stage ? { currentStage: stage } : {};
+                } else {
+                    query = { currentStage: 'Finished' };
+                }
                 break;
 
             case 'BUYER':

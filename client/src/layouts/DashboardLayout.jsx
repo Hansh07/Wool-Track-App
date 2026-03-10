@@ -86,6 +86,7 @@ const DashboardLayout = ({ children, role }) => {
             case 'QUALITY_INSPECTOR':
                 return [
                     { to: '/', icon: ClipboardCheck, label: 'Lab Hub' },
+                    { to: '/batches', icon: Package, label: 'All Batches' },
                     { to: '/quality/analytics', icon: BarChart2, label: 'Analytics' },
                     { to: '/certificates', icon: Award, label: 'Certificates' },
                     ...common,

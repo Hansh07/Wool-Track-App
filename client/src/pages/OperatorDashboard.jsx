@@ -18,65 +18,65 @@ const STAGES = ['RAW', 'Cleaning', 'Carding', 'Spinning', 'Finished'];
 
 const STAGE_CFG = {
     RAW: {
-        icon:   <Inbox size={15} />,
-        dot:    'bg-blue-500',
+        icon: <Inbox size={15} />,
+        dot: 'bg-blue-500',
         border: 'border-blue-400',
-        badge:  'bg-blue-50 text-blue-600 border-blue-200',
-        pill:   'bg-blue-50 text-blue-600',
-        track:  'bg-blue-500',
+        badge: 'bg-blue-50 text-blue-600 border-blue-200',
+        pill: 'bg-blue-50 text-blue-600',
+        track: 'bg-blue-500',
         accent: '#3b82f6',
-        soft:   '#EFF6FF',
+        soft: '#EFF6FF',
     },
     Cleaning: {
-        icon:   <Sparkles size={15} />,
-        dot:    'bg-amber-400',
+        icon: <Sparkles size={15} />,
+        dot: 'bg-amber-400',
         border: 'border-amber-400',
-        badge:  'bg-amber-50 text-amber-600 border-amber-200',
-        pill:   'bg-amber-50 text-amber-600',
-        track:  'bg-amber-400',
+        badge: 'bg-amber-50 text-amber-600 border-amber-200',
+        pill: 'bg-amber-50 text-amber-600',
+        track: 'bg-amber-400',
         accent: '#f59e0b',
-        soft:   '#FFFBEB',
+        soft: '#FFFBEB',
     },
     Carding: {
-        icon:   <Layers size={15} />,
-        dot:    'bg-orange-500',
+        icon: <Layers size={15} />,
+        dot: 'bg-orange-500',
         border: 'border-orange-400',
-        badge:  'bg-orange-50 text-orange-600 border-orange-200',
-        pill:   'bg-orange-50 text-orange-600',
-        track:  'bg-orange-500',
+        badge: 'bg-orange-50 text-orange-600 border-orange-200',
+        pill: 'bg-orange-50 text-orange-600',
+        track: 'bg-orange-500',
         accent: '#f97316',
-        soft:   '#FFF7ED',
+        soft: '#FFF7ED',
     },
     Spinning: {
-        icon:   <RefreshCw size={15} />,
-        dot:    'bg-violet-500',
+        icon: <RefreshCw size={15} />,
+        dot: 'bg-violet-500',
         border: 'border-violet-400',
-        badge:  'bg-violet-50 text-violet-600 border-violet-200',
-        pill:   'bg-violet-50 text-violet-600',
-        track:  'bg-violet-500',
+        badge: 'bg-violet-50 text-violet-600 border-violet-200',
+        pill: 'bg-violet-50 text-violet-600',
+        track: 'bg-violet-500',
         accent: '#8b5cf6',
-        soft:   '#F5F3FF',
+        soft: '#F5F3FF',
     },
     Finished: {
-        icon:   <Award size={15} />,
-        dot:    'bg-emerald-500',
+        icon: <Award size={15} />,
+        dot: 'bg-emerald-500',
         border: 'border-emerald-400',
-        badge:  'bg-emerald-50 text-emerald-600 border-emerald-200',
-        pill:   'bg-emerald-50 text-emerald-600',
-        track:  'bg-emerald-500',
+        badge: 'bg-emerald-50 text-emerald-600 border-emerald-200',
+        pill: 'bg-emerald-50 text-emerald-600',
+        track: 'bg-emerald-500',
         accent: '#10b981',
-        soft:   '#ECFDF5',
+        soft: '#ECFDF5',
     },
 };
 
 /* ─── Weather Icon ─────────────────────────────────────────────────── */
 const WeatherIcon = ({ code, size = 18 }) => {
-    if (code === 0)  return <Sun size={size} className="text-yellow-400" />;
-    if (code <= 3)   return <Cloud size={size} className="text-gray-300" />;
-    if (code <= 48)  return <Cloud size={size} className="text-gray-400" />;
-    if (code <= 67)  return <CloudRain size={size} className="text-blue-400" />;
-    if (code <= 77)  return <CloudSnow size={size} className="text-sky-300" />;
-    if (code <= 82)  return <CloudRain size={size} className="text-blue-400" />;
+    if (code === 0) return <Sun size={size} className="text-yellow-400" />;
+    if (code <= 3) return <Cloud size={size} className="text-gray-300" />;
+    if (code <= 48) return <Cloud size={size} className="text-gray-400" />;
+    if (code <= 67) return <CloudRain size={size} className="text-blue-400" />;
+    if (code <= 77) return <CloudSnow size={size} className="text-sky-300" />;
+    if (code <= 82) return <CloudRain size={size} className="text-blue-400" />;
     return <CloudLightning size={size} className="text-yellow-300" />;
 };
 
@@ -381,13 +381,13 @@ const KanbanColumn = ({
 /* ─── Main Dashboard ────────────────────────────────────────────────── */
 const OperatorDashboard = () => {
     const { user } = useAuth();
-    const [batches, setBatches]           = useState([]);
-    const [loading, setLoading]           = useState(true);
-    const [weather, setWeather]           = useState(null);
+    const [batches, setBatches] = useState([]);
+    const [loading, setLoading] = useState(true);
+    const [weather, setWeather] = useState(null);
     const [showEarningsInfo, setShowEarningsInfo] = useState(false);
     const [draggedBatch, setDraggedBatch] = useState(null);
     const [dragOverStage, setDragOverStage] = useState(null);
-    const [movingBatch, setMovingBatch]   = useState(null);
+    const [movingBatch, setMovingBatch] = useState(null);
 
     const canDrag = user?.permissions?.includes('update_batch_stage');
 
@@ -402,7 +402,7 @@ const OperatorDashboard = () => {
         fetch('https://api.open-meteo.com/v1/forecast?latitude=26.91&longitude=75.79&current=temperature_2m,relative_humidity_2m,wind_speed_10m,weather_code&timezone=Asia%2FKolkata')
             .then(r => r.json())
             .then(d => setWeather(d.current))
-            .catch(() => {});
+            .catch(() => { });
     }, []);
 
     const handleDrop = useCallback(async (targetStage) => {
@@ -417,7 +417,7 @@ const OperatorDashboard = () => {
         setDraggedBatch(null);
         setDragOverStage(null);
         try {
-            await client.patch(`/batches/${draggedBatch._id}`, { stage: targetStage });
+            await client.patch(`/batches/${draggedBatch._id}/status`, { stage: targetStage });
         } catch {
             setBatches(prev);
         } finally {
@@ -427,10 +427,10 @@ const OperatorDashboard = () => {
 
     const getBatchesByStage = (stage) => batches.filter(b => b.currentStage === stage);
 
-    const totalKg    = batches.reduce((s, b) => s + (b.weight || 0), 0);
-    const revenue    = totalKg * 20;
+    const totalKg = batches.reduce((s, b) => s + (b.weight || 0), 0);
+    const revenue = totalKg * 20;
     const inProgress = batches.filter(b => b.currentStage !== 'Finished').length;
-    const finished   = batches.filter(b => b.currentStage === 'Finished').length;
+    const finished = batches.filter(b => b.currentStage === 'Finished').length;
 
     if (loading) return (
         <DashboardLayout role="Mill Operator">

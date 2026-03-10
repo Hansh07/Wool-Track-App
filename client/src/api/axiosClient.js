@@ -1,30 +1,21 @@
 // Robust Axios client with automatic URL normalization
 import axios from 'axios';
 
+const getBaseURL = () => {
+    let url = import.meta.env.VITE_API_URL || '';
+    if (!url.endsWith('/')) url += '/';
+    return url;
+};
+
 const axiosClient = axios.create({
-    baseURL: import.meta.env.VITE_API_URL || '',
+    baseURL: getBaseURL(),
     timeout: 30000,
     headers: { 'Content-Type': 'application/json' },
 });
 
-// Request interceptor - attach access token & fix path duplication
+// Request interceptor - attach access token
 axiosClient.interceptors.request.use(
     (config) => {
-        // --- ROBUST URL NORMALIZATION ---
-        // 1. Ensure baseURL does NOT end with /api
-        if (config.baseURL?.endsWith('/api')) config.baseURL = config.baseURL.slice(0, -4);
-        if (config.baseURL?.endsWith('/api/')) config.baseURL = config.baseURL.slice(0, -5);
-
-        // 2. Ensure url ALWAYS starts with /api (unless it's an external URL)
-        if (config.url && !config.url.startsWith('http') && !config.url.startsWith('//')) {
-            const cleanUrl = config.url.startsWith('/') ? config.url : '/' + config.url;
-            if (!cleanUrl.startsWith('/api')) {
-                config.url = '/api' + cleanUrl;
-            } else {
-                config.url = cleanUrl;
-            }
-        }
-
         const token = localStorage.getItem('accessToken');
         if (token) config.headers.Authorization = 'Bearer ' + token;
         return config;
@@ -68,7 +59,7 @@ axiosClient.interceptors.response.use(
                 return Promise.reject(error);
             }
             try {
-                const res = await axios.post(`${import.meta.env.VITE_API_URL}/auth/refresh`, { refreshToken });
+                const res = await axios.post(`${getBaseURL()}auth/refresh`, { refreshToken });
                 const newAccessToken = res.data.accessToken;
                 const newRefreshToken = res.data.refreshToken;
                 localStorage.setItem('accessToken', newAccessToken);

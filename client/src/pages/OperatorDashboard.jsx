@@ -392,7 +392,7 @@ const OperatorDashboard = () => {
     const canDrag = user?.permissions?.includes('update_batch_stage');
 
     useEffect(() => {
-        client.get('/batches')
+        client.get('/api/batches')
             .then(({ data }) => setBatches(Array.isArray(data) ? data : (data.batches || [])))
             .catch(console.error)
             .finally(() => setLoading(false));
